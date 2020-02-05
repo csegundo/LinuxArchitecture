@@ -1,0 +1,16 @@
+Instrucciones:
+	1) Instalar "xdotool" [Necesario para la ultima opcion]
+	2) Si hay solo un blinkstick conectado: 
+		2.1) gcc -pthread -Wall -g blindrv_user.c -o drv 
+		2.2) sudo ./drv
+	3) Si hay 2 blinksticks conectados:
+		3.1) gcc -pthread -D NEW_STICK -Wall -g blinkdrv_user.c -o drv
+		3.2) sudo ./drv 
+	
+Programa de usuario con diferentes opciones en un menu: 2-arcoiris,5-volumen,6-direccion_raton etc
+
+NOTA: La opcion 6 (mover raton) se ha hecho con 2 blinksticks. Se iluminan los leds segun la zona en la que esta el cursor. Se ha hecho
+dividiendo la pantalla en 16 sectores e iluminando los leds con colores de mayor intensidad cuanto mas arriba esta el cursor y de menor intensidad 
+cuando el cursor se situa en la parte inferior de la pantalla.
+
+AUTORES: Carlos Segundo y Joaquín Asensio.
